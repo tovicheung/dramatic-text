@@ -1,10 +1,3 @@
-
-/// Constants
-const FONT_SIZE = 32; // in px
-const LINE_HEIGHT = 1.2; // default consolas
-
-addEventListener("mousedown", () => document.getElementById("text").focus())
-
 function text_insert(s) {
     let e = document.getElementById('text');
     let start = e.selectionStart;
@@ -13,18 +6,6 @@ function text_insert(s) {
     e.value = e.value.substring(0, start) + s + e.value.substring(end);
     e.selectionStart = e.selectionEnd = start + s.length;
     // e.dispatchEvent(new KeyboardEvent('keydown', {'key': 'ArrowRight'}));
-}
-
-function press(key) {
-    document.getElementById("text").dispatchEvent(new KeyboardEvent("keypress", {"key": key}))
-}
-
-const pairs = {
-    "(": ")",
-    "[": "]",
-    "{": "}",
-    '"': '"',
-    "'": "'",
 }
 
 addEventListener("DOMContentLoaded", () => {
@@ -100,7 +81,7 @@ const CONV = {
     "z": "𝐳",
 }
 
-document.getElementById('text').addEventListener("keydown", e => {
+document.getElementById("text").addEventListener("keydown", e => {
     if (e.key == "c" && e.ctrlKey) {
         navigator.clipboard.writeText(document.getElementById("text").value);
         document.getElementById("copied").style.display = "inline";
