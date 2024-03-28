@@ -107,6 +107,11 @@ document.getElementById('text').addEventListener("keydown", e => {
         setTimeout(() => {
             document.getElementById("copied").style.display = "none";
         }, 800)
+    } else if (e.key == "r" && e.ctrlKey && !e.shiftKey) {
+        // fast reload
+        e.preventDefault();
+        document.getElementById("text").value = "𝐓𝐲𝐩𝐞 𝐬𝐨𝐦𝐞𝐭𝐡𝐢𝐧𝐠 𝐡𝐞𝐫𝐞 ...";
+        document.getElementById("text").select();
     } else if (e.key in CONV && !e.ctrlKey && !e.altKey && !e.metaKey) {
         // console.log(e.key.charCodeAt(0));
         // e.preventDefault();
