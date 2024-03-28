@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    color: white;
+}
+
+#container {
+    margin: 20vh 20vw;
+    width: 60vw;
+    height: 60vh;
+}
+
+#info {
+    margin: 5px;
+    font-family: 'consolas', sans-serif;
+}
+
+#text {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    /* -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none; */
+    overflow: hidden;
+    resize: none;
+    font-size: 32px;
+    font-family: helvetica;
+    color: white;
+    background-color: black;
+    width: 90%;
+    height: 90%;
+
+    /* box-shadow: 0 0 50px 50px white; */
+
+    padding: none;
+
+    tab-size: 4;
+}
